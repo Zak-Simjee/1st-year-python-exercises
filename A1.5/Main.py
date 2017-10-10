@@ -1,0 +1,10 @@
+a=float(input())
+b=float(input())
+c=float(input())
+d=float(input())
+e=float(input())
+li=[a,b,c,d,e]
+print(len(li))
+print(type(li))
+list.sort(li)
+print(li)
