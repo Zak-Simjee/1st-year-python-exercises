@@ -11,22 +11,25 @@ def draw(points):
     plt.plot(x,y, 'b')
     plt.plot(x,y, 'ro')
 
+
 n = 3
 length = 200
 r = length / (2 * math.sin(math.pi / n))
 xc = 250
 yc = 250
+for a in range(n+1):
 
-x1 = (xc + r * math.sin(2 * math.pi * 3 / n))
-y1 = (yc + r * math.cos(2 * math.pi * 3 / n))
-x2 = (xc + r * math.sin(2 * math.pi * 4 / n))
-y2 = (yc + r * math.cos(2 * math.pi * 4 / n))
-x3 = (xc + r * math.sin(2 * math.pi * 5 / n))
-y3 = (yc + r * math.cos(2 * math.pi * 5 / n))
-x4 = (xc + r * math.sin(2 * math.pi * 3 / n))
-y4 = (yc + r * math.cos(2 * math.pi * 3 / n))
+   x1 = 250
+   y1 = 250+(math.sqrt(200**2-100**2)/2)
+   x2 = 250-100
+   y2 = 250-(math.sqrt(200**2-100**2)/2)
+   x3 = 250+100
+   y3 = 250-(math.sqrt(200**2-100**2)/2)
+   x4 = 250
+   y4 = 250+(math.sqrt(200**2-100**2)/2)
 
-points = [(x1,y1), (x2, y2), (x3, y3), (x4, y4)]
+points = [(x1, y1), (x2, y2), (x3, y3), (x4, y4)]
+plt.axis('square')
 plt.axis([0,500,0,500])
 plt.title('A2.4: Points')
 plt.xlabel('x')
