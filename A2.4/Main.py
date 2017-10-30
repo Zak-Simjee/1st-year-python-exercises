@@ -1,4 +1,5 @@
 from matplotlib import pyplot as plt
+import math
 def draw(points):
     print('processing ',len(points), 'points')
     x = []
@@ -9,10 +10,26 @@ def draw(points):
 
     plt.plot(x,y, 'b')
     plt.plot(x,y, 'ro')
+
+n = 3
+length = 200
+r = length / (2 * math.sin(math.pi / n))
+xc = 250
+yc = 250
+
+x1 = (xc + r * math.sin(2 * math.pi * 3 / n))
+y1 = (yc + r * math.cos(2 * math.pi * 3 / n))
+x2 = (xc + r * math.sin(2 * math.pi * 4 / n))
+y2 = (yc + r * math.cos(2 * math.pi * 4 / n))
+x3 = (xc + r * math.sin(2 * math.pi * 5 / n))
+y3 = (yc + r * math.cos(2 * math.pi * 5 / n))
+x4 = (xc + r * math.sin(2 * math.pi * 3 / n))
+y4 = (yc + r * math.cos(2 * math.pi * 3 / n))
+
+points = [(x1,y1), (x2, y2), (x3, y3), (x4, y4)]
 plt.axis([0,500,0,500])
-plt.title('A2.4:Points')
+plt.title('A2.4: Points')
 plt.xlabel('x')
 plt.ylabel('y')
-points = [(100,100), (100,200), (200,200), (200, 100), (100,100)]
 draw(points)
 plt.show()
