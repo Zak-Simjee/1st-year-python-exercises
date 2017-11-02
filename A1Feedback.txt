@@ -1,0 +1,8 @@
+ap17059
+   A1.1 3 Correct
+   A1.2 3 Correct
+   A1.3 4 Correct
+   A1.4 4 Correct - but wrong order of output
+   A1.5 4.0 Correct
+   A1.6 5 Correct
+Total grade : 23.0/24
