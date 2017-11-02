@@ -13,7 +13,7 @@ def polygon(nsides, length, xc, yc, angle):
 
 nsides = int(input('Enter number of sides: '))
 if nsides<2:
-    print('Error: Number of sides must be greater than 2')
+    print('Error: Number of sides cannot be less than 2')
     exit(1)
 
 length = float(input('Enter length: '))
