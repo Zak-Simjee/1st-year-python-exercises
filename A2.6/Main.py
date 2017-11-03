@@ -1,8 +1,6 @@
 from matplotlib import pyplot as plt
 import math
-def drawPoints(points, style):
-    print('processing ', len(points), 'points')
-    style = 'r-'
+def drawPoints(points, style = 'r-'):
     x = []
     y = []
     for i in range(len(points)):
@@ -20,10 +18,19 @@ def main():
     fr = open(a, 'r')
     n = int(fr.readline())
     points = []
+    for a in range(n):
+        b = fr.readline()
+        l = b.split(",")
+        x = l[0]
+        y = l[1][:-2]
+        x = float(x)
+        y = float(y)
+        point = (x, y)
+        points.append(point)
+    drawPoints(points, 'b-')
+    drawPoints(points, 'ro')
+    plt.show()
+    print(points)
 
-
-
-
-
-
+main()
 
