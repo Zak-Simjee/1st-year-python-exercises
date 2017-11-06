@@ -11,9 +11,9 @@ def main():
     pen = (x, y, angle, state)
     fr = open(a, 'r')
     for l in fr:
-        a = l.split(' ')
-        string = a[0]
-        distance = a[1]
+        b = l.split(' ')
+        string = b[0]
+        distance = b[1]
         if string == "PEN":
             distance = distance.rstrip()
             pen = Pen(pen, distance)
@@ -41,14 +41,13 @@ def foward(penstate, distance):
         return xi, yi, angle, distance
 
 
-def rotate(penstate , distance):
+def rotate(penstate, distance):
     x = penstate[0]
     y = penstate[1]
     angle = penstate[2]
     state = penstate[3]
-    anglen = angle + distance
-    return x, y, anglen, state
-
+    anglenew = angle + distance
+    return x, y, anglenew, state
 
 def Pen(penstate, distance):
     x = penstate[0]
